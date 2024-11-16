@@ -1,6 +1,6 @@
 {
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
-  inputs.sops-nix.url = "github:Mic92/sops-nix";
+  inputs.sops-nix.url = "github:Mic92/sops-nix/fe63071416471abdab06caa234122932a7c4b980";
   inputs.sops-nix.inputs.nixpkgs.follows = "nixpkgs";
 
   outputs = inputs: {
