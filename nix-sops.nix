@@ -10,4 +10,5 @@
   sops.templates."some.conf".content = ''
     pass = ${config.sops.placeholder.example_key}
   '';
+  sops.secrets.my-password.neededForUsers = true;
 }

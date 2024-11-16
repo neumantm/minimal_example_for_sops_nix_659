@@ -20,7 +20,6 @@
           {
             imports = [
               ./nix-sops.nix
-              ./users.nix
             ];
           }
         ];
