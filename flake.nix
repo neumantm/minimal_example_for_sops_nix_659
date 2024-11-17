@@ -12,13 +12,9 @@
         modules = [
           {
             system.stateVersion = "24.05";
-          }
-          {
-            environment.etc."age-keys.txt".source = "${./age-keys.txt}";
-          }
-          inputs.sops-nix.nixosModules.sops
-          {
+
             imports = [
+              inputs.sops-nix.nixosModules.sops
               ./nix-sops.nix
             ];
           }
