@@ -1,9 +1,13 @@
-{config, pkgs, ...}:
+{config, ...}:
 
 {
-  sops.age.keyFile = "/etc/age-keys.txt";
+  nixos-shell.mounts.extraMounts = {
+    "/flake/" = ./.;
+  };
+
+  sops.age.keyFile = "/flake/age-keys.txt";
   sops.defaultSopsFile = ./secrets/main.yaml;
-  # disable importing host ssh keys
+  # Disable importing host ssh keys.
   sops.gnupg.sshKeyPaths = [];
 
   sops.secrets.example_key = {};
